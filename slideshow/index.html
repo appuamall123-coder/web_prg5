@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>My Image Gallery</h1>
+    <p>Explore beautiful pictures!</p>
+
+    <!-- Image Gallery -->
+    <div class="gallery">
+        <img src="https://picsum.photos/id/1015/400/300" alt="Mountain" onclick="openSlide(0)">
+        <img src="https://picsum.photos/id/1016/400/300" alt="Nature" onclick="openSlide(1)">
+        <img src="https://picsum.photos/id/1018/400/300" alt="Landscape" onclick="openSlide(2)">
+        <img src="https://picsum.photos/id/1020/400/300" alt="Wildlife" onclick="openSlide(3)">
+        <img src="https://picsum.photos/id/1024/400/300" alt="Animal" onclick="openSlide(4)">
+        <img src="https://picsum.photos/id/1035/400/300" alt="Forest" onclick="openSlide(5)">
+    </div>
+
+    <!-- Slideshow -->
+    <div class="slideshow" id="slideshow">
+        <button class="close" onclick="closeSlide()">X</button>
+
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+
+        <img id="slideImage" src="" alt="Selected gallery image">
+
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+        <button class="play" onclick="toggleAutoPlay()" id="playButton">
+            Start Auto Play
+        </button>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
